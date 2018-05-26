@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from '../book';
 
 @Component({
   selector: 'bok-books',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./books.component.scss']
 })
 export class BooksComponent implements OnInit {
+
+  book: Book = {
+    id: 1,
+    title: 'The Obstacle Is The Way',
+    author: 'Ryan Holiday',
+  };
 
   constructor() { }
 
