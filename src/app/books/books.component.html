@@ -10,10 +10,4 @@
     </ul>
 </div>
 
-<div *ngIf="selectedBook">
-  <h3>Selected Book</h3>
-  <div>
-    <p>Title: {{selectedBook.title}}</p>
-    <p>Author: {{selectedBook.author}}</p>
-  </div>
-</div>
+<bok-book-detail [book]="selectedBook"></bok-book-detail>
