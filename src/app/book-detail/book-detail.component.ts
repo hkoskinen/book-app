@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Book } from '../book';
 
 @Component({
@@ -6,13 +6,6 @@ import { Book } from '../book';
   templateUrl: './book-detail.component.html',
   styleUrls: ['./book-detail.component.scss']
 })
-export class BookDetailComponent implements OnInit {
-
+export class BookDetailComponent {
   @Input() book: Book;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
