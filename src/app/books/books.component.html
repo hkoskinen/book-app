@@ -1,9 +1,19 @@
 <div class="card" style="width: 25rem;">
     <div class="card-header text-center">My Books</div>
     <ul class="list-group list-group-flush">
-      <li *ngFor="let book of books" class="list-group-item">
+      <li *ngFor="let book of books"
+        class="list-group-item" [class.active]="book === selectedBook"
+        (click)="onSelect(book)">
         <span>{{book.id}}</span>
         {{book.title}} by {{book.author}}
       </li>
     </ul>
+</div>
+
+<div *ngIf="selectedBook">
+  <h3>Selected Book</h3>
+  <div>
+    <p>Title: {{selectedBook.title}}</p>
+    <p>Author: {{selectedBook.author}}</p>
+  </div>
 </div>

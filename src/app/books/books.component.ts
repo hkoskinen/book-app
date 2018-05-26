@@ -10,10 +10,12 @@ import { BOOKS } from '../mock-books';
 export class BooksComponent implements OnInit {
 
   books = BOOKS;
+  selectedBook: Book;
 
   constructor() { }
+  ngOnInit() { }
 
-  ngOnInit() {
+  onSelect(book: Book): void {
+    this.selectedBook = book;
   }
-
 }
